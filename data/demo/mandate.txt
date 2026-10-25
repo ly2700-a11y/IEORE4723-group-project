@@ -1,0 +1,15 @@
+Synthetic Investment Mandate (teaching data; not a real fund mandate)
+Effective date: 2026-01-01.
+This mandate applies continuously to daily portfolio valuations and simulated post-trade checks. The portfolio is USD-denominated and long-only; cash, equities and ordinary bonds are permitted.
+NAV equals cash plus non-cash security market values. All limits include the boundary value.
+Cash is not issuer or sector exposure. Issuer and sector classifications come from reference data for the valuation date.
+Reference data may be up to 30 calendar days old. Future-dated, unknown or missing information cannot pass automatically.
+Ratings use a single AAA-to-D symbol scale; ratings from different agencies are not combined.
+ESG flags define a synthetic teaching exclusion list, not an assessment of real companies.
+R1: Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.
+R2: Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.
+R3: Cash must be at least 5% of portfolio NAV.
+R4: Holding the security with identifier TOBACCO is prohibited.
+R5: Holding securities of asset type Future, Option or Swap is prohibited.
+R6: Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.
+R7: Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.

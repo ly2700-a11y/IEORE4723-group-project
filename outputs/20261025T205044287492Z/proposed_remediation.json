@@ -1,0 +1,20 @@
+[
+  {
+    "trade_id": "fix-0-0",
+    "security_id": "ALPHA-A",
+    "delta_value": -85714.2857142857,
+    "fee": 0
+  },
+  {
+    "trade_id": "fix-0-1",
+    "security_id": "ALPHA-B",
+    "delta_value": -14285.71428571428,
+    "fee": 0
+  },
+  {
+    "trade_id": "fix-1-0",
+    "security_id": "TOBACCO",
+    "delta_value": -40000.0,
+    "fee": 0
+  }
+]

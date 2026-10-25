@@ -1,0 +1,23 @@
+[
+  {
+    "file": "esgu_prospectus.pdf",
+    "url": "https://www.ishares.com/us/literature/prospectus/p-ishares-trust-us-esg-8-31.pdf",
+    "recorded_at": "2026-10-25T20:50:44.011188+00:00",
+    "sha256": "256640136da3a83f4d74d4053b425db7c51dd8c8aee7f512967c291ba1e000ad",
+    "bytes": 522013
+  },
+  {
+    "file": "esgu_sai.pdf",
+    "url": "https://www.ishares.com/us/literature/sai/sai-ishares-trust-8-31.pdf",
+    "recorded_at": "2026-10-25T20:50:44.012382+00:00",
+    "sha256": "6169b017e8d4837744e1cf5cc06fdecc96e523756b6dba0a8e2ecc53d40e59a9",
+    "bytes": 826336
+  },
+  {
+    "file": "esgu_holdings.csv",
+    "url": "https://www.blackrock.com/us/individual/products/286007/ishares-esg-aware-msci-usa-etf/latest-holdings.csv",
+    "recorded_at": "2026-10-25T20:50:44.013544+00:00",
+    "sha256": "b43a741376aa03cc8f54cc91a6956c691d8cafa0a33c66c3373ecdfac919f5ff",
+    "bytes": 43541
+  }
+]

@@ -1,0 +1,47 @@
+test_all_cash_portfolio (test_engine.ComplianceTests.test_all_cash_portfolio) ... ok
+test_cash_and_fee_reconcile (test_engine.ComplianceTests.test_cash_and_fee_reconcile) ... ok
+test_changed_document_rejected (test_engine.ComplianceTests.test_changed_document_rejected) ... ok
+test_coverage_not_cleared (test_engine.ComplianceTests.test_coverage_not_cleared) ... ok
+test_duplicate_reference_rejected (test_engine.ComplianceTests.test_duplicate_reference_rejected) ... ok
+test_duplicate_trade_rejected (test_engine.ComplianceTests.test_duplicate_trade_rejected) ... ok
+test_end_to_end (test_engine.ComplianceTests.test_end_to_end) ... ok
+test_forged_evidence_rejected (test_engine.ComplianceTests.test_forged_evidence_rejected) ... ok
+test_future_reference_unknown (test_engine.ComplianceTests.test_future_reference_unknown) ... ok
+test_html_escapes_input (test_engine.ComplianceTests.test_html_escapes_input) ... ok
+test_inclusive_boundaries (test_engine.ComplianceTests.test_inclusive_boundaries) ... ok
+test_invalid_threshold_rejected (test_engine.ComplianceTests.test_invalid_threshold_rejected) ... ok
+test_issuer_aggregates_share_classes (test_engine.ComplianceTests.test_issuer_aggregates_share_classes) ... ok
+test_low_rating_fail (test_engine.ComplianceTests.test_low_rating_fail) ... ok
+test_missing_esg_unknown (test_engine.ComplianceTests.test_missing_esg_unknown) ... ok
+test_missing_sector_unknown (test_engine.ComplianceTests.test_missing_sector_unknown) ... ok
+test_nonfinite_amount_rejected (test_engine.ComplianceTests.test_nonfinite_amount_rejected) ... ok
+test_oversell_rejected (test_engine.ComplianceTests.test_oversell_rejected) ... ok
+test_purchase_rule_not_cleared (test_engine.ComplianceTests.test_purchase_rule_not_cleared) ... ok
+test_rule_date_not_cleared (test_engine.ComplianceTests.test_rule_date_not_cleared) ... ok
+test_stale_reference_unknown (test_engine.ComplianceTests.test_stale_reference_unknown) ... ok
+test_unapproved_not_cleared (test_engine.ComplianceTests.test_unapproved_not_cleared) ... ok
+test_unfunded_rejected (test_engine.ComplianceTests.test_unfunded_rejected) ... ok
+test_unknown_cannot_be_fixed_away (test_engine.ComplianceTests.test_unknown_cannot_be_fixed_away) ... ok
+test_unrated_bond_unknown (test_engine.ComplianceTests.test_unrated_bond_unknown) ... ok
+test_unsupported_asset_not_cleared (test_engine.ComplianceTests.test_unsupported_asset_not_cleared) ... ok
+test_bad_model_proposal_not_pass (test_imports_llm.WorkflowTests.test_bad_model_proposal_not_pass) ... ok
+test_csv_currency_rejected (test_imports_llm.WorkflowTests.test_csv_currency_rejected) ... ok
+test_csv_missing_fields_rejected (test_imports_llm.WorkflowTests.test_csv_missing_fields_rejected) ... ok
+test_documents_combined_with_provenance (test_imports_llm.WorkflowTests.test_documents_combined_with_provenance) ... ok
+test_extraction_never_auto_approves (test_imports_llm.WorkflowTests.test_extraction_never_auto_approves) ... ok
+test_failed_chunk_diagnostic_and_resume (test_imports_llm.WorkflowTests.test_failed_chunk_diagnostic_and_resume) ... ok
+test_input_issues_survive_all_cash_remediation (test_imports_llm.WorkflowTests.test_input_issues_survive_all_cash_remediation) ... ok
+test_long_documents_all_chunks_read (test_imports_llm.WorkflowTests.test_long_documents_all_chunks_read) ... ok
+test_model_oversell_rejected (test_imports_llm.WorkflowTests.test_model_oversell_rejected) ... ok
+test_model_remediation_rechecked (test_imports_llm.WorkflowTests.test_model_remediation_rechecked) ... ok
+test_public_holdings_preserve_zero_future (test_imports_llm.WorkflowTests.test_public_holdings_preserve_zero_future) ... ok
+test_unmatched_quote_quarantined_and_not_cleared (test_imports_llm.WorkflowTests.test_unmatched_quote_quarantined_and_not_cleared) ... ok
+test_public_document_package (test_ui.InterfaceTests.test_public_document_package) ... 2026-10-26 06:04:21.243 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_sequential_flow_and_demo (test_ui.InterfaceTests.test_sequential_flow_and_demo) ... 2026-10-26 06:04:23.081 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 3.076s
+
+OK

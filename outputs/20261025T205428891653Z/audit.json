@@ -1,0 +1,989 @@
+{
+  "created_at": "2026-10-25T22:05:25.285174+00:00",
+  "source_name": "mandate.txt",
+  "source_sha256": "c952b37e4ca76205713a3f75c663065d20fff1e428dc6a4b6a756a5e3c8ce861",
+  "input_sha256": "a5980250549e5e7c69c6bdc7ea24723d352f8188be20957497660f4c49d56b95",
+  "source_type": "synthetic_ips",
+  "inputs": {
+    "rulebook": {
+      "name": "Synthetic USD Investment Mandate",
+      "source_type": "synthetic_ips",
+      "source_sha256": "c952b37e4ca76205713a3f75c663065d20fff1e428dc6a4b6a756a5e3c8ce861",
+      "reviewed_by": "Teaching fixture author (explicit synthetic specification)",
+      "coverage_confirmed": true,
+      "rules": [
+        {
+          "id": "R1",
+          "kind": "issuer_cap",
+          "description": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1",
+          "threshold": 0.25,
+          "values": [],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R2",
+          "kind": "sector_cap",
+          "description": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "locator": "R2",
+          "threshold": 0.4,
+          "values": [],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R3",
+          "kind": "cash_floor",
+          "description": "Cash must be at least 5% of portfolio NAV.",
+          "evidence": "Cash must be at least 5% of portfolio NAV.",
+          "locator": "R3",
+          "threshold": 0.05,
+          "values": [],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R4",
+          "kind": "prohibited_security",
+          "description": "Holding the security with identifier TOBACCO is prohibited.",
+          "evidence": "Holding the security with identifier TOBACCO is prohibited.",
+          "locator": "R4",
+          "threshold": null,
+          "values": [
+            "TOBACCO"
+          ],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R5",
+          "kind": "prohibited_type",
+          "description": "Holding securities of asset type Future, Option or Swap is prohibited.",
+          "evidence": "Holding securities of asset type Future, Option or Swap is prohibited.",
+          "locator": "R5",
+          "threshold": null,
+          "values": [
+            "Future",
+            "Option",
+            "Swap"
+          ],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R6",
+          "kind": "min_rating",
+          "description": "Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.",
+          "evidence": "Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.",
+          "locator": "R6",
+          "threshold": null,
+          "values": [],
+          "rating": "BBB-",
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        },
+        {
+          "id": "R7",
+          "kind": "esg_exclusion",
+          "description": "Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.",
+          "evidence": "Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.",
+          "locator": "R7",
+          "threshold": null,
+          "values": [],
+          "rating": null,
+          "approved": true,
+          "needs_review": false,
+          "effective_from": "2026-01-01"
+        }
+      ]
+    },
+    "snapshot": {
+      "as_of": "2026-10-23",
+      "currency": "USD",
+      "cash": 100000,
+      "positions": [
+        {
+          "security_id": "ALPHA-A",
+          "market_value": 150000
+        },
+        {
+          "security_id": "ALPHA-B",
+          "market_value": 50000
+        },
+        {
+          "security_id": "BETA",
+          "market_value": 150000
+        },
+        {
+          "security_id": "GAMMA",
+          "market_value": 200000
+        },
+        {
+          "security_id": "DELTA",
+          "market_value": 200000
+        },
+        {
+          "security_id": "BOND-A",
+          "market_value": 150000
+        }
+      ]
+    },
+    "references": [
+      {
+        "security_id": "ALPHA-A",
+        "issuer_id": "ALPHA",
+        "sector": "Technology",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "ALPHA-B",
+        "issuer_id": "ALPHA",
+        "sector": "Technology",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "BETA",
+        "issuer_id": "BETA",
+        "sector": "Technology",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "GAMMA",
+        "issuer_id": "GAMMA",
+        "sector": "Healthcare",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "DELTA",
+        "issuer_id": "DELTA",
+        "sector": "Industrials",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "BOND-A",
+        "issuer_id": "BOND-A",
+        "sector": "Financials",
+        "asset_type": "Bond",
+        "rating": "A",
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "TOBACCO",
+        "issuer_id": "TOBACCO",
+        "sector": "Consumer Staples",
+        "asset_type": "Equity",
+        "rating": null,
+        "esg_excluded": true,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "JUNK",
+        "issuer_id": "JUNK",
+        "sector": "Financials",
+        "asset_type": "Bond",
+        "rating": "BB",
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      },
+      {
+        "security_id": "FUTURE",
+        "issuer_id": "FUTURE",
+        "sector": "Technology",
+        "asset_type": "Future",
+        "rating": null,
+        "esg_excluded": false,
+        "as_of": "2026-10-23",
+        "source": "Synthetic teaching reference, not market data"
+      }
+    ],
+    "trades": [
+      {
+        "trade_id": "T1",
+        "security_id": "BOND-A",
+        "delta_value": -100000,
+        "fee": 0
+      },
+      {
+        "trade_id": "T2",
+        "security_id": "ALPHA-A",
+        "delta_value": 150000,
+        "fee": 0
+      },
+      {
+        "trade_id": "T3",
+        "security_id": "TOBACCO",
+        "delta_value": 40000,
+        "fee": 0
+      }
+    ]
+  },
+  "before": {
+    "overall": "PASS",
+    "nav": 1000000.0,
+    "cash": 100000.0,
+    "as_of": "2026-10-23",
+    "findings": [
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "ALPHA: 20.00% of NAV; maximum 25.00%.",
+        "actual": 0.2,
+        "limit": 0.25,
+        "securities": [
+          "ALPHA-A",
+          "ALPHA-B"
+        ],
+        "group": "ALPHA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "BETA: 15.00% of NAV; maximum 25.00%.",
+        "actual": 0.15,
+        "limit": 0.25,
+        "securities": [
+          "BETA"
+        ],
+        "group": "BETA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "BOND-A: 15.00% of NAV; maximum 25.00%.",
+        "actual": 0.15,
+        "limit": 0.25,
+        "securities": [
+          "BOND-A"
+        ],
+        "group": "BOND-A",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "DELTA: 20.00% of NAV; maximum 25.00%.",
+        "actual": 0.2,
+        "limit": 0.25,
+        "securities": [
+          "DELTA"
+        ],
+        "group": "DELTA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "GAMMA: 20.00% of NAV; maximum 25.00%.",
+        "actual": 0.2,
+        "limit": 0.25,
+        "securities": [
+          "GAMMA"
+        ],
+        "group": "GAMMA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Financials: 15.00% of NAV; maximum 40.00%.",
+        "actual": 0.15,
+        "limit": 0.4,
+        "securities": [
+          "BOND-A"
+        ],
+        "group": "Financials",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Healthcare: 20.00% of NAV; maximum 40.00%.",
+        "actual": 0.2,
+        "limit": 0.4,
+        "securities": [
+          "GAMMA"
+        ],
+        "group": "Healthcare",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Industrials: 20.00% of NAV; maximum 40.00%.",
+        "actual": 0.2,
+        "limit": 0.4,
+        "securities": [
+          "DELTA"
+        ],
+        "group": "Industrials",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Technology: 35.00% of NAV; maximum 40.00%.",
+        "actual": 0.35,
+        "limit": 0.4,
+        "securities": [
+          "ALPHA-A",
+          "ALPHA-B",
+          "BETA"
+        ],
+        "group": "Technology",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R3",
+        "kind": "cash_floor",
+        "status": "PASS",
+        "message": "Cash / NAV = 10.00%; minimum 5.00%.",
+        "actual": 0.1,
+        "limit": 0.05,
+        "securities": [],
+        "group": null,
+        "evidence": "Cash must be at least 5% of portfolio NAV.",
+        "locator": "R3"
+      },
+      {
+        "rule_id": "R4",
+        "kind": "prohibited_security",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Holding the security with identifier TOBACCO is prohibited.",
+        "locator": "R4"
+      },
+      {
+        "rule_id": "R5",
+        "kind": "prohibited_type",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Holding securities of asset type Future, Option or Swap is prohibited.",
+        "locator": "R5"
+      },
+      {
+        "rule_id": "R6",
+        "kind": "min_rating",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.",
+        "locator": "R6"
+      },
+      {
+        "rule_id": "R7",
+        "kind": "esg_exclusion",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.",
+        "locator": "R7"
+      }
+    ],
+    "unresolved": false,
+    "scope": "USD long-only cash/equity/bond snapshot; reviewed rules only"
+  },
+  "after": {
+    "overall": "FAIL",
+    "nav": 1000000.0,
+    "cash": 10000.0,
+    "as_of": "2026-10-23",
+    "findings": [
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "FAIL",
+        "message": "ALPHA: 35.00% of NAV; maximum 25.00%.",
+        "actual": 0.35,
+        "limit": 0.25,
+        "securities": [
+          "ALPHA-A",
+          "ALPHA-B"
+        ],
+        "group": "ALPHA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "BETA: 15.00% of NAV; maximum 25.00%.",
+        "actual": 0.15,
+        "limit": 0.25,
+        "securities": [
+          "BETA"
+        ],
+        "group": "BETA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "BOND-A: 5.00% of NAV; maximum 25.00%.",
+        "actual": 0.05,
+        "limit": 0.25,
+        "securities": [
+          "BOND-A"
+        ],
+        "group": "BOND-A",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "DELTA: 20.00% of NAV; maximum 25.00%.",
+        "actual": 0.2,
+        "limit": 0.25,
+        "securities": [
+          "DELTA"
+        ],
+        "group": "DELTA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "GAMMA: 20.00% of NAV; maximum 25.00%.",
+        "actual": 0.2,
+        "limit": 0.25,
+        "securities": [
+          "GAMMA"
+        ],
+        "group": "GAMMA",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R1",
+        "kind": "issuer_cap",
+        "status": "PASS",
+        "message": "TOBACCO: 4.00% of NAV; maximum 25.00%.",
+        "actual": 0.04,
+        "limit": 0.25,
+        "securities": [
+          "TOBACCO"
+        ],
+        "group": "TOBACCO",
+        "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+        "locator": "R1"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Consumer Staples: 4.00% of NAV; maximum 40.00%.",
+        "actual": 0.04,
+        "limit": 0.4,
+        "securities": [
+          "TOBACCO"
+        ],
+        "group": "Consumer Staples",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Financials: 5.00% of NAV; maximum 40.00%.",
+        "actual": 0.05,
+        "limit": 0.4,
+        "securities": [
+          "BOND-A"
+        ],
+        "group": "Financials",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Healthcare: 20.00% of NAV; maximum 40.00%.",
+        "actual": 0.2,
+        "limit": 0.4,
+        "securities": [
+          "GAMMA"
+        ],
+        "group": "Healthcare",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "PASS",
+        "message": "Industrials: 20.00% of NAV; maximum 40.00%.",
+        "actual": 0.2,
+        "limit": 0.4,
+        "securities": [
+          "DELTA"
+        ],
+        "group": "Industrials",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R2",
+        "kind": "sector_cap",
+        "status": "FAIL",
+        "message": "Technology: 50.00% of NAV; maximum 40.00%.",
+        "actual": 0.5,
+        "limit": 0.4,
+        "securities": [
+          "ALPHA-A",
+          "ALPHA-B",
+          "BETA"
+        ],
+        "group": "Technology",
+        "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+        "locator": "R2"
+      },
+      {
+        "rule_id": "R3",
+        "kind": "cash_floor",
+        "status": "FAIL",
+        "message": "Cash / NAV = 1.00%; minimum 5.00%.",
+        "actual": 0.01,
+        "limit": 0.05,
+        "securities": [],
+        "group": null,
+        "evidence": "Cash must be at least 5% of portfolio NAV.",
+        "locator": "R3"
+      },
+      {
+        "rule_id": "R4",
+        "kind": "prohibited_security",
+        "status": "FAIL",
+        "message": "Prohibited or ineligible holdings: TOBACCO",
+        "actual": null,
+        "limit": null,
+        "securities": [
+          "TOBACCO"
+        ],
+        "group": null,
+        "evidence": "Holding the security with identifier TOBACCO is prohibited.",
+        "locator": "R4"
+      },
+      {
+        "rule_id": "R5",
+        "kind": "prohibited_type",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Holding securities of asset type Future, Option or Swap is prohibited.",
+        "locator": "R5"
+      },
+      {
+        "rule_id": "R6",
+        "kind": "min_rating",
+        "status": "PASS",
+        "message": "No ineligible holdings under this rule.",
+        "actual": null,
+        "limit": null,
+        "securities": [],
+        "group": null,
+        "evidence": "Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.",
+        "locator": "R6"
+      },
+      {
+        "rule_id": "R7",
+        "kind": "esg_exclusion",
+        "status": "FAIL",
+        "message": "Prohibited or ineligible holdings: TOBACCO",
+        "actual": null,
+        "limit": null,
+        "securities": [
+          "TOBACCO"
+        ],
+        "group": null,
+        "evidence": "Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.",
+        "locator": "R7"
+      }
+    ],
+    "unresolved": false,
+    "scope": "USD long-only cash/equity/bond snapshot; reviewed rules only"
+  },
+  "after_snapshot": {
+    "as_of": "2026-10-23",
+    "currency": "USD",
+    "cash": 10000.0,
+    "positions": [
+      {
+        "security_id": "ALPHA-A",
+        "market_value": 300000.0
+      },
+      {
+        "security_id": "ALPHA-B",
+        "market_value": 50000.0
+      },
+      {
+        "security_id": "BETA",
+        "market_value": 150000.0
+      },
+      {
+        "security_id": "GAMMA",
+        "market_value": 200000.0
+      },
+      {
+        "security_id": "DELTA",
+        "market_value": 200000.0
+      },
+      {
+        "security_id": "BOND-A",
+        "market_value": 50000.0
+      },
+      {
+        "security_id": "TOBACCO",
+        "market_value": 40000.0
+      }
+    ]
+  },
+  "remediation": {
+    "trades": [
+      {
+        "trade_id": "fix-0-0",
+        "security_id": "ALPHA-A",
+        "delta_value": -85714.2857142857,
+        "fee": 0
+      },
+      {
+        "trade_id": "fix-0-1",
+        "security_id": "ALPHA-B",
+        "delta_value": -14285.71428571428,
+        "fee": 0
+      },
+      {
+        "trade_id": "fix-1-0",
+        "security_id": "TOBACCO",
+        "delta_value": -40000.0,
+        "fee": 0
+      }
+    ],
+    "snapshot": {
+      "as_of": "2026-10-23",
+      "currency": "USD",
+      "cash": 149999.99999999997,
+      "positions": [
+        {
+          "security_id": "ALPHA-A",
+          "market_value": 214285.71428571432
+        },
+        {
+          "security_id": "ALPHA-B",
+          "market_value": 35714.28571428572
+        },
+        {
+          "security_id": "BETA",
+          "market_value": 150000.0
+        },
+        {
+          "security_id": "GAMMA",
+          "market_value": 200000.0
+        },
+        {
+          "security_id": "DELTA",
+          "market_value": 200000.0
+        },
+        {
+          "security_id": "BOND-A",
+          "market_value": 50000.0
+        }
+      ]
+    },
+    "result": {
+      "overall": "PASS",
+      "nav": 1000000.0,
+      "cash": 149999.99999999997,
+      "as_of": "2026-10-23",
+      "findings": [
+        {
+          "rule_id": "R1",
+          "kind": "issuer_cap",
+          "status": "PASS",
+          "message": "ALPHA: 25.00% of NAV; maximum 25.00%.",
+          "actual": 0.25000000000000006,
+          "limit": 0.25,
+          "securities": [
+            "ALPHA-A",
+            "ALPHA-B"
+          ],
+          "group": "ALPHA",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1"
+        },
+        {
+          "rule_id": "R1",
+          "kind": "issuer_cap",
+          "status": "PASS",
+          "message": "BETA: 15.00% of NAV; maximum 25.00%.",
+          "actual": 0.15,
+          "limit": 0.25,
+          "securities": [
+            "BETA"
+          ],
+          "group": "BETA",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1"
+        },
+        {
+          "rule_id": "R1",
+          "kind": "issuer_cap",
+          "status": "PASS",
+          "message": "BOND-A: 5.00% of NAV; maximum 25.00%.",
+          "actual": 0.05,
+          "limit": 0.25,
+          "securities": [
+            "BOND-A"
+          ],
+          "group": "BOND-A",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1"
+        },
+        {
+          "rule_id": "R1",
+          "kind": "issuer_cap",
+          "status": "PASS",
+          "message": "DELTA: 20.00% of NAV; maximum 25.00%.",
+          "actual": 0.2,
+          "limit": 0.25,
+          "securities": [
+            "DELTA"
+          ],
+          "group": "DELTA",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1"
+        },
+        {
+          "rule_id": "R1",
+          "kind": "issuer_cap",
+          "status": "PASS",
+          "message": "GAMMA: 20.00% of NAV; maximum 25.00%.",
+          "actual": 0.2,
+          "limit": 0.25,
+          "securities": [
+            "GAMMA"
+          ],
+          "group": "GAMMA",
+          "evidence": "Combined equity and bond market value for any single issuer must not exceed 25% of portfolio NAV; aggregate all securities of the same issuer.",
+          "locator": "R1"
+        },
+        {
+          "rule_id": "R2",
+          "kind": "sector_cap",
+          "status": "PASS",
+          "message": "Financials: 5.00% of NAV; maximum 40.00%.",
+          "actual": 0.05,
+          "limit": 0.4,
+          "securities": [
+            "BOND-A"
+          ],
+          "group": "Financials",
+          "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "locator": "R2"
+        },
+        {
+          "rule_id": "R2",
+          "kind": "sector_cap",
+          "status": "PASS",
+          "message": "Healthcare: 20.00% of NAV; maximum 40.00%.",
+          "actual": 0.2,
+          "limit": 0.4,
+          "securities": [
+            "GAMMA"
+          ],
+          "group": "Healthcare",
+          "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "locator": "R2"
+        },
+        {
+          "rule_id": "R2",
+          "kind": "sector_cap",
+          "status": "PASS",
+          "message": "Industrials: 20.00% of NAV; maximum 40.00%.",
+          "actual": 0.2,
+          "limit": 0.4,
+          "securities": [
+            "DELTA"
+          ],
+          "group": "Industrials",
+          "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "locator": "R2"
+        },
+        {
+          "rule_id": "R2",
+          "kind": "sector_cap",
+          "status": "PASS",
+          "message": "Technology: 40.00% of NAV; maximum 40.00%.",
+          "actual": 0.4000000000000001,
+          "limit": 0.4,
+          "securities": [
+            "ALPHA-A",
+            "ALPHA-B",
+            "BETA"
+          ],
+          "group": "Technology",
+          "evidence": "Combined equity and bond market value for any single sector must not exceed 40% of portfolio NAV.",
+          "locator": "R2"
+        },
+        {
+          "rule_id": "R3",
+          "kind": "cash_floor",
+          "status": "PASS",
+          "message": "Cash / NAV = 15.00%; minimum 5.00%.",
+          "actual": 0.14999999999999997,
+          "limit": 0.05,
+          "securities": [],
+          "group": null,
+          "evidence": "Cash must be at least 5% of portfolio NAV.",
+          "locator": "R3"
+        },
+        {
+          "rule_id": "R4",
+          "kind": "prohibited_security",
+          "status": "PASS",
+          "message": "No ineligible holdings under this rule.",
+          "actual": null,
+          "limit": null,
+          "securities": [],
+          "group": null,
+          "evidence": "Holding the security with identifier TOBACCO is prohibited.",
+          "locator": "R4"
+        },
+        {
+          "rule_id": "R5",
+          "kind": "prohibited_type",
+          "status": "PASS",
+          "message": "No ineligible holdings under this rule.",
+          "actual": null,
+          "limit": null,
+          "securities": [],
+          "group": null,
+          "evidence": "Holding securities of asset type Future, Option or Swap is prohibited.",
+          "locator": "R5"
+        },
+        {
+          "rule_id": "R6",
+          "kind": "min_rating",
+          "status": "PASS",
+          "message": "No ineligible holdings under this rule.",
+          "actual": null,
+          "limit": null,
+          "securities": [],
+          "group": null,
+          "evidence": "Ordinary bonds use the single rating field defined by this mandate. The minimum rating is BBB-; ratings below BBB- require remediation.",
+          "locator": "R6"
+        },
+        {
+          "rule_id": "R7",
+          "kind": "esg_exclusion",
+          "status": "PASS",
+          "message": "No ineligible holdings under this rule.",
+          "actual": null,
+          "limit": null,
+          "securities": [],
+          "group": null,
+          "evidence": "Securities with esg_excluded=true in the holdings reference table are prohibited; a missing flag must not be treated as a pass.",
+          "locator": "R7"
+        }
+      ],
+      "unresolved": false,
+      "scope": "USD long-only cash/equity/bond snapshot; reviewed rules only"
+    },
+    "verified": true,
+    "assumptions": "Same snapshot prices, zero fees, fractional dollar trades, no slippage. Recheck actual executions. Not investment optimization."
+  },
+  "execution_assumptions": "Atomic batch at fixed snapshot prices; signed USD market values; no shorting/borrowing/FX. Post-trade is simulated, not a broker confirmation.",
+  "status_legend": {
+    "PASS": "Passed under the supplied rules, data and assumptions",
+    "FAIL": "Confirmed breach",
+    "UNKNOWN": "Insufficient data",
+    "REVIEW": "Manual interpretation or approval required"
+  },
+  "translation_regeneration": {
+    "previous_audit_sha256": "32f6d8bcc92be3fea8a78fccdd36ae4c29fbc693e9ff4c54561cc527a293da6c",
+    "previous_created_at": "2026-10-25T20:54:28.891444+00:00",
+    "reason": "Regenerated synthetic demonstration using the English mandate and matching evidence hashes."
+  }
+}
